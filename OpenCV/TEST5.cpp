@@ -84,7 +84,7 @@ vector<Rect> model_inference(Mat frame, vector<Rect> bboxes, Net model) {
 
     bboxes = {};
     //create blob from image
-    Mat blob = blobFromImage(frame, 1.0, Size(300, 300), Scalar(127.5, 127.5, 127.5),
+    Mat blob = blobFromImage(frame, 1.0, Size(300,300), Scalar(127.5, 127.5, 127.5),
         true, false);
     model.setInput(blob);
     //forward pass through the model to carry out the detection
